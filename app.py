@@ -415,18 +415,6 @@ def main():
     text = '\n\n'.join([i['text'] for i in results])
     text_html = '\n\n'.join([i['text_html'] for i in results])
 
-    if args.action and not environ['GP_TOKEN']:
-        text += (
-            '\n\n当前 Actions 尚未配置 GP_TOKEN, 请参考 '
-            'https://Yumu152068.cn/posts/2023/auto-signin-aliyundrive-by-using-github-action/#github-personal-token'
-            ' 尽快处理.'
-        )
-        text_html += (
-            '\n\n当前 Actions 尚未配置 GP_TOKEN, 请参考 '
-            'https://Yumu152068.cn/posts/2023/auto-signin-aliyundrive-by-using-github-action/#github-personal-token'
-            ' 尽快处理.'
-        )
-
     push(config, text, text_html, '阿里云盘签到')
 
     # 更新 refresh token
