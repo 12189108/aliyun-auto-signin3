@@ -117,13 +117,13 @@ runs:
     - id: version
       uses: pozetroninc/github-action-get-latest-release@master
       with:
-        repository: Yumu152068/aliyun-auto-signin
+        repository: 12189108/aliyun-auto-signin3
         excludes: prerelease, draft
         token: ${{ inputs.GP_TOKEN }}
     - name: Download
       shell: bash
       run: |
-        wget https://github.com/Yumu152068/aliyun-auto-signin/archive/refs/tags/${{ steps.version.outputs.release }}.zip -O release.zip
+        wget https://github.com/12189108/aliyun-auto-signin3/archive/refs/tags/${{ steps.version.outputs.release }}.zip -O release.zip
         rm -rf release
         unzip release.zip -d release
         rm release.zip
