@@ -142,7 +142,7 @@ class SignIn:
 
         if self.do_not_reward:
             if self.signin_count < len(data['result']['signInLogs']):
-                logging.info(f'[{self.phone}] 已设置不领取奖励.')
+                logging.info('已设置不领取奖励.')
                 self.signin_reward = '跳过领取奖励'
                 return
 
